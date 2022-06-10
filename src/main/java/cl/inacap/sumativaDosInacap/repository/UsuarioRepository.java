@@ -7,6 +7,6 @@ import cl.inacap.sumativaDosInacap.entity.UsuarioEntity;
 public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Integer>{
 
 	UsuarioEntity findByNombre(String nombre);
-	void removeByNombreAndPassword(String n, String p);
+	void deleteByNombreAndPassword(String n, String p);
 	
 }
