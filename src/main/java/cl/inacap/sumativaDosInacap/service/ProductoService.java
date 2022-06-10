@@ -43,13 +43,13 @@ public class ProductoService implements ProductoDAO{
 	}
 
 	@Override
-	public ProductoEntity buscarNombre(String n) {
+	public List<ProductoEntity> buscarNombre(String n) {
 		// TODO Auto-generated method stub
 		return repo.findByNombreContains(n);
 	}
 
 	@Override
-	public ProductoEntity buscarCategoria(String c) {
+	public List<ProductoEntity> buscarCategoria(String c) {
 		// TODO Auto-generated method stub
 		return repo.findByCategoria(c);
 	}

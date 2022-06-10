@@ -10,6 +10,6 @@ public interface ProductoDAO {
 	public void modificar(ProductoEntity u);
 	public List<ProductoEntity> listar();
 	public ProductoEntity buscar(int id);
-	public ProductoEntity buscarNombre(String n);
-	public ProductoEntity buscarCategoria(String c);
+	public List<ProductoEntity> buscarNombre(String n);
+	public List<ProductoEntity> buscarCategoria(String c);
 }
