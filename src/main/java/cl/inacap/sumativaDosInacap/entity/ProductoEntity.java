@@ -22,6 +22,7 @@ public class ProductoEntity {
 	private String caracteristicas;
 	@Column(length = 50, nullable = false)
 	private String categoria;
+	
 	public int getId() {
 		return id;
 	}
