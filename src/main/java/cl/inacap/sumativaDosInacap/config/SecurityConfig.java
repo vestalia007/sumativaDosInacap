@@ -14,14 +14,11 @@ import cl.inacap.sumativaDosInacap.service.UsuarioSecurityService;
 
 @EnableWebSecurity
 @Configuration
-public class SecurituConfig extends WebSecurityConfigurerAdapter{
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Autowired
 	private UsuarioSecurityService service;
-	
-	//@Autowired
-	//private BCryptPasswordEncoder bcpe;
-	
+		
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder()

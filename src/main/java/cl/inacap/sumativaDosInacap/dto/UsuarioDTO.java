@@ -6,6 +6,8 @@ public class UsuarioDTO {
 	private String password;
 	private String perfil;
 	private int edad;
+	private String token;
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -30,4 +32,11 @@ public class UsuarioDTO {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
+	
 }
