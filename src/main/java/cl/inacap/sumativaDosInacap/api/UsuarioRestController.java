@@ -10,7 +10,10 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,6 +37,7 @@ public class UsuarioRestController {
 	
 	@PostMapping("/login")
 	public UsuarioDTO login(@RequestParam("nombre") String nombre, @RequestParam("password") String password) {
+		//Falta Valida usuario contra la db
 		String token =  getJWTToken(nombre);
 		UsuarioDTO user = new UsuarioDTO();
 		user.setNombre(nombre);
@@ -61,8 +65,15 @@ public class UsuarioRestController {
 			return new UsuarioDTO();
 		}		
 	}
+	@PutMapping("/update")
+	public void actualizarUsuario(@RequestBody UsuarioDTO u) {
+		//Actualizar usuario en db
+	}
 	
-	
+	@DeleteMapping("/delete/{id}")
+	public void eliminarUsuario(@PathVariable("id") int id) {
+		//Eliminar desde en la base de datos
+	}
 	
 	private String getJWTToken(String username)
 	{

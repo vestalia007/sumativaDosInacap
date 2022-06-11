@@ -35,9 +35,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 		//.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 		.authorizeRequests()
-		//.antMatchers("/api/user/**").permitAll()
-		.antMatchers("/h2-console/**").permitAll()
-		.antMatchers("/api/productos/**").permitAll()
+		.antMatchers("/api/user/**").permitAll()//solo acceso a admin para eliminar 
+		.antMatchers("/h2-console/**").permitAll() // solo permiso a perfil espefico(admin)
+		.antMatchers("/api/productos/**").permitAll()//solo permiso a perfil especifico
 		.anyRequest().authenticated();
 	}
 

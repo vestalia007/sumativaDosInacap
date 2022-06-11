@@ -1,0 +1,9 @@
+FALTA:
+	DOCKER
+	-encapsularlo para docker
+	-crear docker file
+	-crear imagen de docker
+	 
+	 PRUEBAS UNITARIAS
+	 -definir pruebas
+	 -crear pruebas unitarias
